@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import Btn from './Btn'
 
 const Navbar = () => {
     return (
@@ -15,6 +16,7 @@ const Navbar = () => {
                     <li><Link to="/about" className="nav-link">About</Link></li>
                     <li><Link to="/signin" className="nav-link">Sign In</Link></li>
                     <li><Link to="/signup" className="nav-link nav-cta">Sign Up</Link></li>
+                    <li><Btn title='Logout' color ='btn btn-danger' /></li>
                 </ul>
             </div>
         </nav>
