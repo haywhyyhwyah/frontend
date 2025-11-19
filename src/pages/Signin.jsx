@@ -21,6 +21,16 @@ const signin = () => {
           axios.post("https://backend-ubp2.onrender.com/user/signin", userData)
           .then((res) => {
             console.log("Response", res.data)
+
+            if (res.data.token) {
+              localStorage.setItem('token', res.data.token);
+              console.log("Token saved:", res.data.token);
+            }
+
+            if (res.data.userdata) {
+              localStorage.setItem('user', JSON.stringify(res.data.user))
+            }
+            
             alert("Sign in successful");
             navigate("/dashboard")
           })
