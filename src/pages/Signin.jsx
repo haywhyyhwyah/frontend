@@ -30,13 +30,13 @@ const signin = () => {
             if (res.data.userdata) {
               localStorage.setItem('user', JSON.stringify(res.data.user))
             }
-            
+
             alert("Sign in successful");
             navigate("/dashboard")
           })
           .catch((err) => {
             console.log("Error", err.response ? err.response.data : err)
-            alert("Signup failed")
+            alert("Invalid email or password")
           })
           console.log(userData)
       }
